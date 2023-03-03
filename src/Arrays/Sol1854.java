@@ -1,5 +1,8 @@
 package Arrays;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Sol1854 {
     public static void main(String[] args) {
         int[][] logs = {{1993,1999},{2000,2010}};
@@ -8,13 +11,25 @@ public class Sol1854 {
     }
 
     public static int maximumPopulation(int[][] logs) {
-        int currPop = 0;
-        int[] pop = new int[100];
+        int start, end;
+        ArrayList<Integer> pop = new ArrayList<>();
         for (int i = 1950; i < 2501; i++) {
+            int currPop = 0;
             for (int[] person: logs) {
+                start = person[0];
+                end = person[1];
+                if (start <= i && i < end){
+                    currPop++;
+                }
             }
-            pop[i-1950] = currPop;
+            pop.add(currPop);
         }
-        return 0;
+        int max = Collections.max(pop);
+        for (int i = 0; i < pop.size(); i++) {
+            if (pop.get(i) == max){
+                return 1950+i;
+            }
+        }
+        return 1950;
     }
 }
