@@ -8,12 +8,13 @@ public class Notes2 {
         int[] arr2 = {22,21,17,15,12,11,8,6,4,2,1};
         int target = 17;
 
-        System.out.println(orderAgnosticBS(arr,target,true));
-        System.out.println(orderAgnosticBS(arr2, target,false));
+        System.out.println(orderAgnosticBS(arr,target));
+        System.out.println(orderAgnosticBS(arr2,target));
     }
-    public static int orderAgnosticBS(int[] arr, int target, boolean isAscending){
+    public static int orderAgnosticBS(int[] arr, int target){
         int start = 0;
         int end = arr.length-1;
+        boolean isAscending = arr[end] > arr[start];
 
         while(start <= end){
             int mid = start + ((end-start)/2);
