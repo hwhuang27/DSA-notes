@@ -2,6 +2,7 @@ package Searching;
 
 public class Sol81 {
     public static void main(String[] args) {
+        // hints used
         int[] nums1 = {4,4,4,4,4,4,4,5,7,0,2,4,4};
         int[] nums = {2,9,2,2,2};
         int target = 0;
@@ -39,16 +40,11 @@ public class Sol81 {
                 end--;
             }
             // solve for new shrunk array
-            else if (){
-
-            }
-
-            // old
-            if (nums[mid] <= nums[start]){
-                end = mid-1;
+            else if (nums[start] < nums[mid] || (nums[start] == nums[mid] && nums[mid] > nums[end])){
+                start = mid+1;
             }
             else{
-                start = mid+1;
+                end = mid-1;
             }
         }
         return -1;
