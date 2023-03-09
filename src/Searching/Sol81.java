@@ -1,12 +1,12 @@
 package Searching;
 
-public class Sol33 {
+public class Sol81 {
     public static void main(String[] args) {
-        //int[] nums = {4,5,6,7,0,1,2};
+        int[] nums1 = {4,4,4,4,4,4,4,5,7,0,2,4,4};
         int[] nums = {2,9,2,2,2};
-        int target = 6;
-        //System.out.println(search(nums,target));
+        int target = 0;
         System.out.println(findPivot(nums));
+        System.out.println(search(nums,target));
     }
 
     public static int findPivot(int[] nums){
@@ -24,8 +24,27 @@ public class Sol33 {
                 return mid-1;
             }
 
-            // case 3 & 4 - shorten search range
-            if (nums[start] > nums[mid]){
+            // case 3 - if mid, start, & end are equal (for duplicate value arrays)
+            // then shrink array by moving start + 1 and end - 1 until above is false
+            if(nums[mid] == nums[start] && nums[mid] == nums[end]){
+                // check if start is pivot
+                if(nums[start] > nums[start+1]){
+                    return start;
+                }
+                start++;
+                // check if end is pivot
+                if(nums[end] < nums[end-1]){
+                    return end-1;
+                }
+                end--;
+            }
+            // solve for new shrunk array
+            else if (){
+
+            }
+
+            // old
+            if (nums[mid] <= nums[start]){
                 end = mid-1;
             }
             else{
@@ -34,19 +53,24 @@ public class Sol33 {
         }
         return -1;
     }
-    public static int search(int[] nums, int target) {
+    public static boolean search(int[] nums, int target) {
         int pivot = findPivot(nums);
         if (pivot == -1){
-            return binarySearch(nums,target, 0, nums.length-1);
+            return binarySearch(nums, target, 0, nums.length - 1) > -1;
         }
         if (nums[pivot] == target){
-            return pivot;
+            return true;
         }
-        if (target >= nums[0]){
-            return binarySearch(nums, target, 0, pivot-1);
+        if (target > nums[0]) {
+            return binarySearch(nums, target, 0, pivot - 1) > -1;
+        }
+        else if (target < nums[0]){
+            return binarySearch(nums, target, pivot+1, nums.length-1) > -1;
+        }
+        else{
+            return true;
         }
 
-        return binarySearch(nums, target, pivot+1, nums.length-1);
     }
 
     public static int binarySearch(int[] nums, int target, int start, int end){
