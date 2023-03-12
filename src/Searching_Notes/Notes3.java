@@ -1,4 +1,4 @@
-package Searching;
+package Searching_Notes;
 
 public class Notes3 {
     // Binary search with infinite array size

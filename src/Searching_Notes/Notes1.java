@@ -1,4 +1,4 @@
-package Searching;
+package Searching_Notes;
 
 public class Notes1 {
     // linear search notes

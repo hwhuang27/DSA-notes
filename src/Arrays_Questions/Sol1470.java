@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_Questions;
 import java.util.Arrays;
 
 public class Sol1470 {

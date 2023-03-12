@@ -1,4 +1,4 @@
-package Searching;
+package Searching_Notes;
 
 import java.util.ArrayList;
 import java.util.Arrays;

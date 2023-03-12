@@ -1,9 +1,9 @@
-package Searching;
+package Searching_Notes;
 
 public class Sol81 {
     public static void main(String[] args) {
         // hints used
-        int[] nums1 = {4,4,4,4,4,4,4,5,7,0,2,4,4};
+        //int[] nums1 = {4,4,4,4,4,4,4,5,7,0,2,4,4};
         int[] nums = {2,9,2,2,2};
         int target = 0;
         System.out.println(findPivot(nums));

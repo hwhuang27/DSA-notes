@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_Questions;
 
 public class Sol1572 {
     public static void main(String[] args) {

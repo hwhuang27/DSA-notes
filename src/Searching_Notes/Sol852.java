@@ -1,4 +1,4 @@
-package Searching;
+package Searching_Notes;
 
 public class Sol852 {
     public static void main(String[] args) {
