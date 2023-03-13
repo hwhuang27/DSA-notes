@@ -3,7 +3,7 @@ package Searching_Questions;
 public class Sol1539 {
     public static void main(String[] args) {
         int[] arr = {2,3,4,7,11};
-        int k = 5;
+        int k = 1;
         System.out.println(findKthPositive(arr, k));
     }
 
