@@ -10,11 +10,8 @@ public class Sol1528 {
     }
     public static String restoreString(String s, int[] indices) {
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < s.length(); i++) {
-            builder.
 
-        }
-
+        return ".";
     }
 
 }
