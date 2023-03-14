@@ -1,6 +1,6 @@
 package Searching_Notes;
 
-public class Notes2 {
+public class Notes2_BinarySearch {
     // binary search notes
     public static void main(String[] args) {
         // note: array should be sorted before using binary search
@@ -10,6 +10,9 @@ public class Notes2 {
 
         System.out.println(orderAgnosticBS(arr,target));
         System.out.println(orderAgnosticBS(arr2,target));
+        System.out.println(binarySearch(arr,target));
+        System.out.println(findFloor(arr, target));
+        System.out.println(findCeiling(arr, target));
     }
     public static int orderAgnosticBS(int[] arr, int target){
         int start = 0;

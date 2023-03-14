@@ -1,6 +1,6 @@
 package Searching_Notes;
 
-public class Notes3 {
+public class Notes3_InfiniteBS {
     // Binary search with infinite array size
     // cannot use arr.length -> we can't use start/end
     // solution? make a start/end by searching in "chunks"
@@ -14,7 +14,6 @@ public class Notes3 {
     public static int infiniteBinarySearch(int[] arr, int target){
         int start = 0;
         int end = 1;
-        int ans = -1;
 
         while(arr[end] < target){
             int temp = end+1;

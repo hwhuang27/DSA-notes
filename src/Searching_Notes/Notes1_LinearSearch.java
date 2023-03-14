@@ -1,6 +1,6 @@
 package Searching_Notes;
 
-public class Notes1 {
+public class Notes1_LinearSearch {
     // linear search notes
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
