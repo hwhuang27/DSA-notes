@@ -9,9 +9,27 @@ public class Sol1528 {
 
     }
     public static String restoreString(String s, int[] indices) {
-        StringBuilder builder = new StringBuilder();
+        char[] arr = s.toCharArray();
+        boolean swapped;
+        for (int i = 0; i < indices.length; i++) {
+            swapped = false;
+            for (int j = 1; j < indices.length-i; j++) {
+                if(indices[j] < indices[j-1]){
+                    int temp = indices[j-1];
+                    indices[j-1] = indices[j];
+                    indices[j] = temp;
 
-        return ".";
+                    char temp2 = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp2;
+                    swapped = true;
+                }
+            }
+            if(!swapped){
+                return new String(arr);
+            }
+        }
+        return new String(arr);
     }
 
 }
