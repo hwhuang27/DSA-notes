@@ -1,5 +1,4 @@
 package oop.notes;
-import oop.notes.Singleton;
 
 public class Notes1 {
     public static void main(String[] args) {
