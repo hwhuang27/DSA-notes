@@ -1,7 +1,6 @@
 package linkedList;
 
-import oop.notes4.Parent;
-
+// linked list
 public class LL {
     private Node head;
     private Node tail;
