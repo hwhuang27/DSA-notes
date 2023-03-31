@@ -9,7 +9,6 @@ public class CircularQueue {
     protected int end = 0;   // pointer for the end (last) element
     protected int front = 0;
     private int size = 0;
-
     public CircularQueue(){
         this(DEFAULT_SIZE); // this just calls the below constructor with DEFAULT_SIZE value
         // new CustomStack(DEFAULT_SIZE);
