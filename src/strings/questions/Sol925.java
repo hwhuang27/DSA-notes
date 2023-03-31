@@ -15,14 +15,14 @@ public class Sol925 {
         int typelen = typed.length();
         int p1 = 0;
         int p2 = 0;
-
+        // case 1 & 2
         if(name.charAt(0) != typed.charAt(0)){
             return false;
         }
         if(namelen > typelen){
             return false;
         }
-
+        // case 3 & 4
         while(p1 < namelen && p2 < typelen){
             if(name.charAt(p1) == typed.charAt(p2)){
                 p1++;
@@ -35,7 +35,7 @@ public class Sol925 {
                 return false;
             }
         }
-
+        // case 5
         while(p2 < typelen){
             if(name.charAt(namelen-1) == typed.charAt(p2)){
                 p2++;
@@ -44,7 +44,7 @@ public class Sol925 {
                 return false;
             }
         }
-
+        // case 6
         if(p1 < namelen-1){
             return false;
         }
