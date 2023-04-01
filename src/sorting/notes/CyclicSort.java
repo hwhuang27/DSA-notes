@@ -2,7 +2,7 @@ package sorting.notes;
 
 import java.util.Arrays;
 
-public class Notes4_CyclicSort {
+public class CyclicSort {
     public static void main(String[] args) {
         int[] arr = {6,5,4,3,2,1};
         cyclicSort(arr);
