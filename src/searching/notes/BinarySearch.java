@@ -1,6 +1,6 @@
 package searching.notes;
 
-public class Notes2_BinarySearch {
+public class BinarySearch {
     // binary search notes
     public static void main(String[] args) {
         // note: array should be sorted before using binary search

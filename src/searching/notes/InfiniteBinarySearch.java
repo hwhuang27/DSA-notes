@@ -1,6 +1,6 @@
 package searching.notes;
 
-public class Notes3_InfiniteBS {
+public class InfiniteBinarySearch {
     // Binary search with infinite array size
     // cannot use arr.length -> we can't use start/end
     // solution? make a start/end by searching in "chunks"
