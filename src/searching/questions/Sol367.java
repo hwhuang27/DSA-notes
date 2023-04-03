@@ -1,6 +1,6 @@
 package searching.questions;
 
-public class So367 {
+public class Sol367 {
     public static void main(String[] args) {
         int num = 16;
         System.out.println(isPerfectSquare(num));
